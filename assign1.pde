@@ -52,5 +52,4 @@ void draw() {
   
   //show the robot
   image(robotImg,robotX,robotY);
-  println(floor(random(2,8)));
  }
