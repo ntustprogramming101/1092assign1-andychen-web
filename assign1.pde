@@ -5,8 +5,14 @@ PImage groundhogImg;
 PImage robotImg;
 PImage soldierImg;
 
+int block = 80;
+int soldierX = -block;
+int soldierY = block*floor(random(2,6));
+int robotX= block*floor(random(2,8));
+int robotY= block*floor(random(2,6));
+
 void setup() {
-  size(640, 480, P2D);
+	size(640, 480, P2D);
   backgroundImg = loadImage ("img/bg.jpg");
   soilImg = loadImage ("img/soil.png");
   lifeImg = loadImage ("img/life.png");
@@ -17,7 +23,7 @@ void setup() {
 }
 
 void draw() {
-  //show the background images
+	//show the background images
   image(backgroundImg,0,0);
   image(soilImg,0,160);
   image(lifeImg,10,10);
@@ -38,4 +44,13 @@ void draw() {
   
   //show the groundhog
   image(groundhogImg,280,80);
-}
+  
+  //show the soldier and make it move
+  image(soldierImg,soldierX,soldierY);
+  soldierX += 3;
+  if (soldierX >= 640)soldierX = -block;
+  
+  //show the robot
+  image(robotImg,robotX,robotY);
+  println(floor(random(2,8)));
+ }
