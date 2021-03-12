@@ -6,7 +6,7 @@ PImage robotImg;
 PImage soldierImg;
 
 void setup() {
-	size(640, 480, P2D);
+  size(640, 480, P2D);
   backgroundImg = loadImage ("img/bg.jpg");
   soilImg = loadImage ("img/soil.png");
   lifeImg = loadImage ("img/life.png");
@@ -17,7 +17,7 @@ void setup() {
 }
 
 void draw() {
-	//show the background images
+  //show the background images
   image(backgroundImg,0,0);
   image(soilImg,0,160);
   image(lifeImg,10,10);
@@ -36,9 +36,6 @@ void draw() {
   noStroke();
   rect(0,145,640,15);
   
-  //show the character images
+  //show the groundhog
   image(groundhogImg,280,80);
-  image(robotImg,400,160);
-  image(soldierImg,230,400);
-  
 }
